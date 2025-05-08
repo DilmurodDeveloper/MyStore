@@ -1,0 +1,27 @@
+﻿@page
+@model MyStore.Pages.Products.DeleteModel
+@{
+    ViewData["Title"] = "Delete Product";
+}
+
+<h1>Delete Product</h1>
+
+<h3>Are you sure you want to delete this product?</h3>
+
+<div>
+    <strong>Name: </strong> @Model.Product.Name
+</div>
+<div>
+    <strong>Brand: </strong> @Model.Product.Brand
+</div>
+<div>
+    <strong>Price: </strong> @Model.Product.Price
+</div>
+<div>
+    <strong>Description: </strong> @Model.Product.Description
+</div>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Yes, delete it</button>
+    <a asp-page="Index" class="btn btn-secondary">No, back to list</a>
+</form>

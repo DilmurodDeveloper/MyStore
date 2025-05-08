@@ -1,0 +1,28 @@
+﻿@page
+@model MyStore.Pages.Products.CreateModel
+@{
+    ViewData["Title"] = "Add Product";
+}
+
+<h1>Add New Product</h1>
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Product.Name" class="form-label"></label>
+        <input asp-for="Product.Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Product.Brand" class="form-label"></label>
+        <input asp-for="Product.Brand" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Product.Price" class="form-label"></label>
+        <input asp-for="Product.Price" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Product.Description" class="form-label"></label>
+        <textarea asp-for="Product.Description" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-page="Index" class="btn btn-secondary">Back</a>
+</form>
